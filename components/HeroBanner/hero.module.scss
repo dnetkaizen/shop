@@ -1,0 +1,27 @@
+.HeroBanner {
+  background: url(/assets/dragon.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90svh;
+  h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0 10px #fff, 0 0 10px #fff;
+
+    @media screen and (max-width: 400px) {
+      font-size: 4em;
+      white-space: wrap;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    height: 80svh;
+    line-height: 1.3;
+  }
+}

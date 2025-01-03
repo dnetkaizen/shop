@@ -1,0 +1,45 @@
+.ProductDetails {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  color: #000;
+  text-align: center;
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .table {
+    margin: 3rem 0;
+    .tableheader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0;
+      border-top: 1px solid #ccc;
+      @media screen and (max-width: 400px) {
+        width: 90vw;
+      }
+      span {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:nth-child(2) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;;
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+  }
+
+}
