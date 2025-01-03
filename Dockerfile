@@ -7,7 +7,7 @@ WORKDIR /app
 # Copia los archivos necesarios
 COPY package.json package-lock.json ./
 
-# Instala las dependencias ignorando conflictos
+# Instala las dependencias
 RUN npm install --legacy-peer-deps
 
 # Copia el resto de los archivos
@@ -16,8 +16,8 @@ COPY . .
 # Construye la aplicación
 RUN npm run build
 
-# Expon el puerto por defecto de Next.js
+# Expone el puerto 3000
 EXPOSE 3000
 
-# Define el comando de inicio
-CMD ["npm", "start"]
+# Modifica el comando de inicio para usar el puerto de Railway
+CMD ["npm", "run", "start"]
